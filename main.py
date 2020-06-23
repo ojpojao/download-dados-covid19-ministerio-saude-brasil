@@ -6,8 +6,8 @@ _URL= 'https://xx9p7hp1p7.execute-api.us-east-1.amazonaws.com/prod/PortalGeral'
 
 def download_request(url, headers):
   """
-  This function get a json file with params from 'results' column to use on requests like urls to data files.
-  This return is a dict with params for new requests.
+  This function get a json file with params for new requests to get data files url.
+  This return a *requests* object.
   """
   try:
     response = requests.get(url, headers=headers)
