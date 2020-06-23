@@ -1,5 +1,7 @@
-# download-dados-covid19-ministerio-saude-brasil
-Download do arquivo de dados sobre a covid 19 no Brasil pelo Painel https://covid.saude.gov.br/
+# Download do arquivo de dados sobre a covid 19 no Brasil pelo Painel https://covid.saude.gov.br/
+
+O Painel Coronavírus do Ministério da Saúde possui a opção para o download direito do arquivo. Mas se você quer automatizar o download
+dos dados, este script pode lhe ser útil.
 
 
 #### Pré-requisitos
@@ -53,4 +55,9 @@ No Windows, através do git-bash
 python main.py
 ```
 
+#### Me siga
+* [@ojpojao](https://twitter.com/ojpojao)
+
+#### Sobre mim
+Estudante de Tecnologia em Redes de Computadores no IFAp. Gosto de coisas relacionadas a cultura DevOps e programação, e claro, Redes de Computadores em geral. Fã de futsal e futebol. Chama pra gente marcar um fut.
   
