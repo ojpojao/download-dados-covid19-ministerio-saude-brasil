@@ -1,13 +1,22 @@
+__author__ = "ojpojao"
+__version__ = "1.0"
+__email__ = "ojpojao@gmail.com"
+
 import requests
 from requests.exceptions import HTTPError
 
 _HEADERS = {'x-parse-application-id': 'unAFkcaNDeXajurGB7LChj8SgQYS2ptm'}  
 _URL= 'https://xx9p7hp1p7.execute-api.us-east-1.amazonaws.com/prod/PortalGeral'
 
-def download_request(url, headers):
+def download_request(url: str, headers: dict):
   """
   This function get a json file with params for new requests to get data files url.
-  This return a *requests* object.
+  This return a requests object: Response.
+
+  Params:
+  - url: url for request
+  - headers: headers custom
+
   """
   try:
     response = requests.get(url, headers=headers)
@@ -21,7 +30,18 @@ def download_request(url, headers):
     data_params = response
   return data_params
 
-def get_url(data_params, type):
+def get_url(data_params, type='csv') -> str:
+  """
+  Return a string with url to download file.
+
+  Params:
+  - data_params: response object from requests module
+  - type: type of file. ['csv', 'xlsx']
+
+  Default file type is csv.
+  
+  """
+
   file_extension = type
   file = data_params.json()['results'][0]
 
@@ -32,7 +52,14 @@ def get_url(data_params, type):
 
   return file_url
 
-def download_file(file_url, headers):
+def download_file(file_url: str, headers: dict):
+  """
+  Make a web request and save it to a file.
+
+  Params:
+  - file_url: url do download
+  - headers: headers customizations
+  """
 
   file = download_request(file_url, headers=headers)
   name_ext = file_url.split('.')[-1]
