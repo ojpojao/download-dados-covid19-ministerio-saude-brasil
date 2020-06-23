@@ -17,7 +17,7 @@ Download do arquivo de dados sobre a covid 19 no Brasil pelo Painel https://covi
     cd download-dados-covid19-ministerio-saude-brasil
   ```
   
-**ATENÇÂO:** caso não queira usar o *virtualenv*, pule para o passo 5.
+**ATENÇÃO:** caso não queira usar o *virtualenv*, pule para o passo 5.
  
 2. Instalando virtualenv
   ```
